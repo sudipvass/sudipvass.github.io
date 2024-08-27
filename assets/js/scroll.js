@@ -19,19 +19,3 @@ scrollTopBtn.addEventListener("click", () => {
     });
 });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const menuLinks = document.querySelectorAll("#mobileMenu a");
-
-    function activateMenuLink() {
-      let index = sections.length;
-
-      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-      menuLinks.forEach((link) => link.classList.remove("active"));
-      menuLinks[index].classList.add("active");
-    }
-
-    activateMenuLink();
-    window.addEventListener("scroll", activateMenuLink);
-  });
