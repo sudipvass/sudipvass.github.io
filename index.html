@@ -1,349 +1,735 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/js/tailwin.js"></script>
     <title>ADSKTM - Your Digital Advertising Partner</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-    
-    </style>
-</head>
+    <style></style>
+  </head>
 
-<body class="font-sans leading-normal tracking-normal">
+  <body class="font-sans leading-normal tracking-normal">
     <!-- Navbar -->
-    <nav id="navbar" class="sticky z-50 bg-primary2 top-0 left-0 w-full p-3   text-white  transition-all duration-300">
+    <nav
+      id="navbar"
+      class="sticky z-50 bg-primary2 top-0 left-0 w-full p-3 text-white transition-all duration-300"
+    >
       <div class="flex items-center justify-between">
-          <div class="flex items-center flex-shrink-0 mr-6">
-              <a href="/">
-                  <img src="./assets/images/adsktmLogo.jpg" alt="ADSKTM logo" class="w-12 h-12 md:w-16 md:h-16 rounded-lg  cursor-pointer">
-              </a>
-          </div>
-          <!-- Toggle button for mobile view -->
-          <button class="block md:hidden text-white focus:outline-none" id="navbarToggle">
-              <img src="./assets/images/menu_icon.png" class="h-6 w-6 text-white bg-white rounded hover:bg-primary1" alt="">
-          </button>
-          <div id="navbarMenu" class="hidden md:flex md:items-center md:justify-center flex-1 space-x-3 md:space-x-10">
-              <a href="/" class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1">Home</a>
-              <a href="#about" class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1">About</a>
-  
-              <div class="relative dropdown group">
-                  <a class="hover:text-primary1 font-bold text-lg md:text-xl active:text-primary1 cursor-pointer mobile-nav-item ">Services</a>
-                  <div class="dropdown-menu bg-slate-400 text-white py-2 px-6 mt-2 rounded shadow-lg hidden group-hover:block">
-                      <a href="#seo" class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1">SEO Optimization</a>
-                      <a href="#smm" class="block px-4 py-2 font-bold hover:text-primary1">Social Media Marketing</a>
-                      <a href="#content" class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1">Content Creation</a>
-                  </div>
-              </div>
-              <a href="#products" class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1">Products</a>
-              <a href="#blogs" class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1">Blogs</a>
-              <a href="#contact" class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1">Contact</a>
-          </div>
-      </div>
-  
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="absolute top-0 right-4 w-100  flex h-full fixed inset-0 bg-slate-600 text-white hidden z-50">
-       
-        <div class="mobileNavHeader ">
-         <a href="/">
-           <img src="./assets/images/adsktmLogo.jpg" alt="ADSKTM logo" class="w-12 h-12 md:w-16 md:h-16 cursor-pointer absolute rounded-lg hover:text-primary1 top-4 left-4 text-2xl">
-         </a>
-          <button id="closeMobileMenu" class="absolute hover:text-primary1 top-4 right-4 text-2xl">&#x2715;</button>
+        <div class="flex items-center flex-shrink-0 mr-6">
+          <a href="/">
+            <img
+              src="./assets/images/adsktmLogo.jpg"
+              alt="ADSKTM logo"
+              class="w-12 h-12 md:w-16 md:h-16 rounded-lg cursor-pointer"
+            />
+          </a>
         </div>
-        
-        <div class="W-full mt-20 flex flex-1 flex-col items-start pl-2">
-            <a href="/" class="mobile-nav-item font-bold text-lg md:text-xl mb-4 hover:text-primary1">Home</a>
-            <a href="#about" class=" mobile-nav-item font-bold text-lg md:text-xl mb-4 hover:text-primary1 ">About</a>
-            
-            <!-- Services dropdown for mobile -->
-            <div id="mobileServices" class="w-full mb-4">
-                <a id="mobileServicesToggle" class="mobile-nav-item font-bold text-lg md:text-xl cursor-pointer hover:text-primary1">Services</a>
-                <div id="mobileServicesMenu" class="hidden flex-col pl-4 mt-2">
-                    <a href="#seo" class="block py-2 font-bold hover:text-primary1">SEO Optimization</a>
-                    <a href="#smm" class="block py-2 font-bold hover:text-primary1">Social Media Marketing</a>
-                    <a href="#content" class="block py-2 font-bold hover:text-primary1">Content Creation</a>
-                </div>
+        <!-- Toggle button for mobile view -->
+        <button
+          class="block md:hidden text-white focus:outline-none"
+          id="navbarToggle"
+        >
+          <img
+            src="./assets/images/menu_icon.png"
+            class="h-6 w-6 text-white bg-white rounded hover:bg-primary1"
+            alt=""
+          />
+        </button>
+        <div
+          id="navbarMenu"
+          class="hidden md:flex md:items-center md:justify-center flex-1 space-x-3 md:space-x-10"
+        >
+          <a
+            href="/"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >About</a
+          >
+
+          <div class="relative dropdown group">
+            <a
+              class="hover:text-primary1 font-bold text-lg md:text-xl active:text-primary1 cursor-pointer mobile-nav-item"
+              >Services</a
+            >
+            <div
+              class="dropdown-menu bg-slate-400 text-white py-2 px-6 mt-2 rounded shadow-lg hidden group-hover:block"
+            >
+              <a
+                href="#seo"
+                class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
+                >SEO Optimization</a
+              >
+              <a
+                href="#smm"
+                class="block px-4 py-2 font-bold hover:text-primary1"
+                >Social Media Marketing</a
+              >
+              <a
+                href="#content"
+                class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
+                >Content Creation</a
+              >
             </div>
-            
-            <a href="#products" class="mobile-nav-item font-bold text-lg md:text-xl mb-4 hover:text-primary1">Products</a>
-            <a href="#blogs" class="mobile-nav-item font-bold text-lg md:text-xl mb-4 hover:text-primary1">Blogs</a>
-            <a href="#contact" class="mobile-nav-item font-bold text-lg md:text-xl mb-4 hover:text-primary1">Contact</a>
+          </div>
+          <a
+            href="#products"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Products</a
+          >
+          <a
+            href="#blogs"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Blogs</a
+          >
+          <a
+            href="#contact"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Contact</a
+          >
         </div>
+      </div>
+
+   
+<div
+id="mobileMenu"
+class="absolute inset-0 w-full h-screen bg-slate-600 flex flex-col text-white hidden z-50"
+>
+<div class="mobileNavHeader bg-slate-900 flex items-center justify-between p-4">
+  <a href="/">
+    <img
+      src="./assets/images/adsktmLogo.jpg"
+      alt="ADSKTM logo"
+      class="w-12 h-12 md:w-16 md:h-16 cursor-pointer rounded-lg hover:text-primary1"
+    />
+  </a>
+  <button
+    id="closeMobileMenu"
+    class="hover:text-primary1 text-2xl"
+  >
+    &#x2715;
+  </button>
+</div>
+
+<div
+  class="w-full flex-1 mt-6 flex flex-col items-start pl-4 space-y-4"
+>
+  <a
+    href="/"
+    class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+    >Home</a
+  >
+  <a
+    href="#about"
+    class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+    >About</a
+  >
+
+  <!-- Services dropdown for mobile -->
+  <div id="mobileServices" class="w-full">
+    <a
+      id="mobileServicesToggle"
+      class="mobile-nav-item font-bold text-lg md:text-xl cursor-pointer hover:text-primary1"
+      >Services</a
+    >
+    <div id="mobileServicesMenu" class="hidden flex flex-col pl-4 mt-2 space-y-2">
+      <a href="#seo" class="block py-2 font-bold hover:text-primary1"
+        >SEO Optimization</a
+      >
+      <a href="#smm" class="block py-2 font-bold hover:text-primary1"
+        >Social Media Marketing</a
+      >
+      <a
+        href="#content"
+        class="block py-2 font-bold hover:text-primary1"
+        >Content Creation</a
+      >
     </div>
-    
-  </nav>
-  
+  </div>
+
+  <a
+    href="#products"
+    class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+    >Products</a
+  >
+  <a
+    href="#blogs"
+    class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+    >Blogs</a
+  >
+  <a
+    href="#contact"
+    class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+    >Contact</a
+  >
+</div>
+</div>
+
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center p-6 hero">
-        <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
-            <source src="./assets/video/video1.mp4" type="video/mp4">
-        </video>
-        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
-        <div class="relative z-10 w-full md:w-1/2 p-5 flex flex-col items-start hero-content" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="text-4xl md:text-6xl lg:text-6xl text-white font-bold mb-4 text-reveal infinite-animation"> <span class="text-primary1">Empower Your</span> Brand with ADSKTM</h1>
-            <p class="text-base md:text-lg lg:text-xl text-white mb-6 text-reveal infinite-animation font-bold" style="animation-delay: 1s;">Your gateway to unparalleled digital advertising solutions.</p>
-         
-          <a href="#contact">
-            <button class="relative py-2 px-6 uppercase text-primary1 font-bold transition-all flex items-center gap-3 duration-500 ease-in-out border-2 rounded-full border-white-700 overflow-hidden bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary2 before:transform before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-in-out before:rounded-full hover:text-white before:hover:scale-x-100" style="animation-delay: 2s;">
-              <span class="relative z-10">Get Started</span>
-              <span class="text-3xl pb-2 relative z-10">&#8594;</span>
-            </button>
-          </a>
-          
-          
-        </div>
-        <div class="relative z-10 w-full md:w-1/2 p-5 hero-img-container " data-aos="fade-left" data-aos-duration="1500">
-            <img src="./assets/images/digimg.webp" alt="ADSKTM Advertising" class="w-full h-auto rounded-full shadow-lg opacity-70">
-        </div>
+    <section
+      id="home"
+      class="relative flex flex-col md:flex-row items-center justify-center bg-cover bg-center p-6 hero"
+    >
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        autoplay
+        muted
+        loop
+      >
+        <source src="./assets/video/video1.mp4" type="video/mp4" />
+      </video>
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"
+      ></div>
+      <div
+        class="relative z-10 w-full md:w-1/2 p-5 flex flex-col items-start hero-content"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+      >
+        <h1
+          class="text-4xl md:text-6xl lg:text-6xl text-white font-bold mb-4 text-reveal infinite-animation"
+        >
+          <span class="text-primary1">Empower Your</span> Brand with ADSKTM
+        </h1>
+        <p
+          class="text-base md:text-lg lg:text-xl text-white mb-6 text-reveal infinite-animation font-bold"
+          style="animation-delay: 1s"
+        >
+          Your gateway to unparalleled digital advertising solutions.
+        </p>
+
+        <a href="#contact">
+          <button
+            class="relative py-2 px-6 uppercase text-primary1 font-bold transition-all flex items-center gap-3 duration-500 ease-in-out border-2 rounded-full border-white-700 overflow-hidden bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary2 before:transform before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-in-out before:rounded-full hover:text-white before:hover:scale-x-100"
+            style="animation-delay: 2s"
+          >
+            <span class="relative z-10">Get Started</span>
+            <span class="text-3xl pb-2 relative z-10">&#8594;</span>
+          </button>
+        </a>
+      </div>
+      <div
+        class="relative z-10 w-full md:w-1/2 p-5 hero-img-container"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
+        <img
+          src="./assets/images/digimg.webp"
+          alt="ADSKTM Advertising"
+          class="w-full h-auto rounded-full shadow-lg opacity-70"
+        />
+      </div>
     </section>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" title="Go to top" class="fixed bottom-10 right-6 bg-primary1 text-white py-4 px-6 text-4xl rounded-full cursor-pointer z-50 hover:bg-primary2">&#8679;</button>
+    <button
+      id="scrollTopBtn"
+      title="Go to top"
+      class="fixed bottom-10 right-6 bg-primary1 text-white py-4 px-6 text-4xl rounded-full cursor-pointer z-50 hover:bg-primary2"
+    >
+      &#8679;
+    </button>
 
-   
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 text-gray-900 shadow-lg">
+      <div class="about-container">
+        <h2
+          class="text-4xl text-orange-600 md:text-4xl font-bold mb-4 text-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          About Us
+        </h2>
+        <p
+          class="md:text-lg mb-8 text-justify flex justify-center p-6"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          ADSKTM is a leading digital advertising agency specializing in
+          innovative solutions to boost your online presence. Our suite of
+          services is designed to maximize your online presence and deliver
+          measurable results. Our mission is to empower your brand to reach new
+          heights.
+        </p>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-100 text-gray-900 shadow-lg">
-    <div class="about-container">
-      <h2 class="text-4xl text-orange-600 md:text-4xl font-bold mb-4 text-center" data-aos="fade-up" data-aos-duration="1500">About Us</h2>
-      <p class="  md:text-lg mb-8 text-justify flex justify-center p-6" data-aos="fade-up" data-aos-duration="1500"
-        data-aos-delay="200" >ADSKTM is a leading digital advertising agency specializing in
-        innovative solutions to boost your online presence. Our suite of services is designed to maximize your online
-        presence and deliver measurable results. Our mission is to empower your brand to reach new heights.</p>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-24 bg-gray-100 text-slate-600">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl text-primary1 md:text-4xl font-bold mb-8" data-aos="fade-up" data-aos-duration="1500">Our Services</h2>
-        <p class="text-base md:text-lg mb-12 text-primary2 font-bold" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Comprehensive solutions to elevate your digital presence.</p>
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-100 text-slate-600">
+      <div class="container mx-auto text-center">
+        <h2
+          class="text-3xl text-primary1 md:text-4xl font-bold mb-8"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Our Services
+        </h2>
+        <p
+          class="text-base md:text-lg mb-12 text-primary2 font-bold"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          Comprehensive solutions to elevate your digital presence.
+        </p>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
-            <!-- Service 1 -->
-            <div id="seo" class="w-full p-4 flex" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                <div class="bg-white rounded-lg  shadow-lg p-8 flex flex-col justify-between w-full">
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold mb-4">SEO Optimization</h3>
-                        <p class="text-base md:text-lg">Boost your website's visibility with our expert SEO services.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 2 -->
-            <div id="smm" class="w-full p-4 flex" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
-                <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-full">
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold mb-4">Social Media Marketing</h3>
-                        <p class="text-base md:text-lg">Engage your audience with targeted social media campaigns.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div id="content" class="w-full p-4 flex" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
-                <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-full">
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold mb-4">Content Creation</h3>
-                        <p class="text-base md:text-lg">Deliver compelling content that resonates with your audience.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-  <!-- Products Section -->
-  <section id="products" class="py-20 bg-gray-900 text-white">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl text-primary1 font-bold mb-6" data-aos="fade-up" data-aos-duration="1500">Our Products</h2>
-        <p class="text-base md:text-lg mb-10 font-bold" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Discover our range of digital marketing products tailored to your needs.</p>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
-            <!-- Product 1 -->
-            <div class="w-full p-4 flex" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col justify-between w-full">
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold mb-4">Product 1</h3>
-                        <p class="text-base md:text-lg">A powerful tool to enhance your online presence.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="w-full p-4 flex" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col justify-between w-full">
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold mb-4">Product 2</h3>
-                        <p class="text-base md:text-lg">Maximize your reach with our innovative solutions.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="w-full p-4 flex" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col justify-between w-full">
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-semibold mb-4">Product 3</h3>
-                        <p class="text-base md:text-lg">Drive results with our cutting-edge technology.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-  <!-- Blogs Section -->
-  <section id="blogs" class="py-16 bg-gray-100 text-gray-900">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl text-primary1 font-bold mb-4" data-aos="fade-up" data-aos-duration="1500">Our Blogs</h2>
-      <p class="text-base md:text-lg mb-8 text-primary2 font-bold" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-        Get insights and tips from our expert blogs.
-      </p>
-      <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
-        <!-- Blog 1 -->
-        <div class="w-full p-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-          <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Boost Your Brand with These SEO Tips</h3>
-            <p class="text-base md:text-lg mb-6">
-              Learn the best practices for optimizing your website's SEO to rank higher on search engines.
-            </p>
-            <div class="mt-auto">
-              <a>
-                <button class="read-more-btn relative py-2.5 px-5 uppercase text-primary2-800 transition-all duration-500 ease-in-out rounded-full overflow-hidden  border-gray-800 bg-orange-100 before:absolute before:top-0  before:left-0 before:w-full before:h-full before:bg-primary1 before:transform before:scale-y-0 before:origin-bottom before:transition-transform before:duration-500 before:ease-in-out before:rounded-full before:border-transparent hover:text-white  before:hover:scale-y-100">
-                  <span class="relative z-10 rounded-full">Read More</span>
-                  <span class="text-2xl py-1 relative z-10">&#8594;</span>
-                </button>
-              </a>
+          <!-- Service 1 -->
+          <div
+            id="seo"
+            class="w-full p-4 flex"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <div
+              class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-full"
+            >
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold mb-4">
+                  SEO Optimization
+                </h3>
+                <p class="text-base md:text-lg">
+                  Boost your website's visibility with our expert SEO services.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-  
-        <!-- Blog 2 -->
-        <div class="w-full p-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
-          <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Social Media Strategies That Work</h3>
-            <p class="text-base md:text-lg mb-6">
-              Discover how to create effective social media campaigns that engage your audience and drive results.
-            </p>
-            <div class="mt-auto">
-              <a>
-                <button class="read-more-btn relative py-2.5 px-5 uppercase text-primary2-800 transition-all duration-500 ease-in-out rounded-full overflow-hidden  border-gray-800 bg-orange-100 before:absolute before:top-0  before:left-0 before:w-full before:h-full before:bg-primary1 before:transform before:scale-y-0 before:origin-bottom before:transition-transform before:duration-500 before:ease-in-out before:rounded-full before:border-transparent hover:text-white  before:hover:scale-y-100">
-                  <span class="relative z-10 rounded-full">Read More</span>
-                  <span class="text-2xl py-1 relative z-10">&#8594;</span>
-                </button>
-              </a>
+
+          <!-- Service 2 -->
+          <div
+            id="smm"
+            class="w-full p-4 flex"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1000"
+          >
+            <div
+              class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-full"
+            >
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold mb-4">
+                  Social Media Marketing
+                </h3>
+                <p class="text-base md:text-lg">
+                  Engage your audience with targeted social media campaigns.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-  
-        <!-- Blog 3 -->
-        <div class="w-full p-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
-          <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Content Creation Tips for 2024</h3>
-            <p class="text-base md:text-lg mb-6">
-              Get ahead of the competition with these top content creation strategies for 2024.
-            </p>
-            <div class="mt-auto">
-              <a>
-                <button class="read-more-btn relative py-2.5 px-5 uppercase text-primary2-800 transition-all duration-500 ease-in-out rounded-full overflow-hidden  border-gray-800 bg-orange-100 before:absolute before:top-0  before:left-0 before:w-full before:h-full before:bg-primary1 before:transform before:scale-y-0 before:origin-bottom before:transition-transform before:duration-500 before:ease-in-out before:rounded-full before:border-transparent hover:text-white  before:hover:scale-y-100">
-                  <span class="relative z-10 rounded-full">Read More</span>
-                  <span class="text-2xl py-1 relative z-10">&#8594;</span>
-                </button>
-              </a>
+
+          <!-- Service 3 -->
+          <div
+            id="content"
+            class="w-full p-4 flex"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1500"
+          >
+            <div
+              class="bg-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-full"
+            >
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold mb-4">
+                  Content Creation
+                </h3>
+                <p class="text-base md:text-lg">
+                  Deliver compelling content that resonates with your audience.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
 
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-900 text-white">
+      <div class="container mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl text-primary1 font-bold mb-6"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Our Products
+        </h2>
+        <p
+          class="text-base md:text-lg mb-10 font-bold"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          Discover our range of digital marketing products tailored to your
+          needs.
+        </p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-[rgb(20,3,59)] text-white">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-primary1" data-aos="fade-up" data-aos-duration="1500">Contact Us</h2>
-        <form action="#" method="POST" class="w-full md:w-1/2 mx-auto" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-            <div class="mb-4">
-                <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-primary2-700">
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
+          <!-- Product 1 -->
+          <div
+            class="w-full p-4 flex"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col justify-between w-full"
+            >
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold mb-4">
+                  Product 1
+                </h3>
+                <p class="text-base md:text-lg">
+                  A powerful tool to enhance your online presence.
+                </p>
+              </div>
             </div>
-            <div class="mb-4">
-                <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-primary2-700">
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="w-full p-4 flex"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1000"
+          >
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col justify-between w-full"
+            >
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold mb-4">
+                  Product 2
+                </h3>
+                <p class="text-base md:text-lg">
+                  Maximize your reach with our innovative solutions.
+                </p>
+              </div>
             </div>
-            <div class="mb-4">
-                <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-primary2-700"></textarea>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="w-full p-4 flex"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1500"
+          >
+            <div
+              class="bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col justify-between w-full"
+            >
+              <div>
+                <h3 class="text-xl md:text-2xl font-semibold mb-4">
+                  Product 3
+                </h3>
+                <p class="text-base md:text-lg">
+                  Drive results with our cutting-edge technology.
+                </p>
+              </div>
             </div>
-            <button type="submit" class="bg-orange-100  font-bold py-3 px-6 rounded-full hover:bg-primary1 hover:text-white text-primary1 transition-all duration-300">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs" class="py-16 bg-gray-100 text-gray-900">
+      <div class="container mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl text-primary1 font-bold mb-4"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Our Blogs
+        </h2>
+        <p
+          class="text-base md:text-lg mb-8 text-primary2 font-bold"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          Get insights and tips from our expert blogs.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
+          <!-- Blog 1 -->
+          <div
+            class="w-full p-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-xl md:text-2xl font-bold mb-4">
+                Boost Your Brand with These SEO Tips
+              </h3>
+              <p class="text-base md:text-lg mb-6">
+                Learn the best practices for optimizing your website's SEO to
+                rank higher on search engines.
+              </p>
+              <div class="mt-auto">
+                <a>
+                  <button
+                    class="read-more-btn relative py-2.5 px-5 uppercase text-primary2-800 transition-all duration-500 ease-in-out rounded-full overflow-hidden border-gray-800 bg-orange-100 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary1 before:transform before:scale-y-0 before:origin-bottom before:transition-transform before:duration-500 before:ease-in-out before:rounded-full before:border-transparent hover:text-white before:hover:scale-y-100"
+                  >
+                    <span class="relative z-10 rounded-full">Read More</span>
+                    <span class="text-2xl py-1 relative z-10">&#8594;</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 2 -->
+          <div
+            class="w-full p-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1000"
+          >
+            <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-xl md:text-2xl font-bold mb-4">
+                Social Media Strategies That Work
+              </h3>
+              <p class="text-base md:text-lg mb-6">
+                Discover how to create effective social media campaigns that
+                engage your audience and drive results.
+              </p>
+              <div class="mt-auto">
+                <a>
+                  <button
+                    class="read-more-btn relative py-2.5 px-5 uppercase text-primary2-800 transition-all duration-500 ease-in-out rounded-full overflow-hidden border-gray-800 bg-orange-100 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary1 before:transform before:scale-y-0 before:origin-bottom before:transition-transform before:duration-500 before:ease-in-out before:rounded-full before:border-transparent hover:text-white before:hover:scale-y-100"
+                  >
+                    <span class="relative z-10 rounded-full">Read More</span>
+                    <span class="text-2xl py-1 relative z-10">&#8594;</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 3 -->
+          <div
+            class="w-full p-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="1500"
+          >
+            <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-xl md:text-2xl font-bold mb-4">
+                Content Creation Tips for 2024
+              </h3>
+              <p class="text-base md:text-lg mb-6">
+                Get ahead of the competition with these top content creation
+                strategies for 2024.
+              </p>
+              <div class="mt-auto">
+                <a>
+                  <button
+                    class="read-more-btn relative py-2.5 px-5 uppercase text-primary2-800 transition-all duration-500 ease-in-out rounded-full overflow-hidden border-gray-800 bg-orange-100 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary1 before:transform before:scale-y-0 before:origin-bottom before:transition-transform before:duration-500 before:ease-in-out before:rounded-full before:border-transparent hover:text-white before:hover:scale-y-100"
+                  >
+                    <span class="relative z-10 rounded-full">Read More</span>
+                    <span class="text-2xl py-1 relative z-10">&#8594;</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-[rgb(20,3,59)] text-white">
+      <div class="container mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-8 text-primary1"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Contact Us
+        </h2>
+        <form
+          action="#"
+          method="POST"
+          class="w-full md:w-1/2 mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+        >
+          <div class="mb-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="w-full p-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-primary2-700"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="w-full p-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-primary2-700"
+            />
+          </div>
+          <div class="mb-4">
+            <textarea
+              rows="4"
+              placeholder="Your Message"
+              class="w-full p-3 rounded-lg bg-white text-black focus:outline-none focus:ring-2 focus:ring-primary2-700"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-orange-100 font-bold py-3 px-6 rounded-full hover:bg-primary1 hover:text-white text-primary1 transition-all duration-300"
+          >
+            Send Message
+          </button>
         </form>
-    </div>
-</section>
-<!-- Footer Section -->
-<footer class="bg-[rgb(42,108,202)] text-white py-10">
-  <div class="container mx-auto px-4 md:px-20">
-    <div class="flex flex-col md:flex-row justify-between mb-8">
-      <!-- Footer Logo and Description -->
-      <div class="w-full md:w-1/3 mb-6 md:mb-0">
-        <img src="./assets/images/adsktmLogo.jpg" alt="ADSKTM logo" class="w-16 h-16 mb-4">
-        <p class="text-base md:text-lg leading-relaxed">Empower your brand with ADSKTM. Our digital marketing expertise drives results through innovative solutions and data-driven strategies, helping you excel in the digital world.</p>
       </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-[rgb(42,108,202)] text-white py-10">
+      <div class="container mx-auto px-4 md:px-20">
+        <div class="flex flex-col md:flex-row justify-between mb-8">
+          <!-- Footer Logo and Description -->
+          <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <img
+              src="./assets/images/adsktmLogo.jpg"
+              alt="ADSKTM logo"
+              class="w-16 h-16 mb-4"
+            />
+            <p class="text-base md:text-lg leading-relaxed">
+              Empower your brand with ADSKTM. Our digital marketing expertise
+              drives results through innovative solutions and data-driven
+              strategies, helping you excel in the digital world.
+            </p>
+          </div>
 
-      <!-- Quick Links -->
-      <div class=" mb-6 md:mb-0">
-        <h3 class="text-xl font-bold mb-4 relative before:absolute before:left-0 before:bottom-[-2px] before:h-[2px] before:w-20 before:bg-primary1 cursor-pointer">Quick Links</h3>
-        <ul class="space-y-2">
-          <li><a href="#home" class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold">Home</a></li>
-          <li><a href="#about" class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold">About</a></li>
-          <li><a href="#services" class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold">Services</a></li>
-          <li><a href="#products" class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold">Products</a></li>
-          <li><a href="#blogs" class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold">Blogs</a></li>
-          <li><a href="#contact" class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold">Contact</a></li>
-        </ul>
-      </div>
-      
+          <!-- Quick Links -->
+          <div class="mb-6 md:mb-0">
+            <h3
+              class="text-xl font-bold mb-4 relative before:absolute before:left-0 before:bottom-[-2px] before:h-[2px] before:w-20 before:bg-primary1 cursor-pointer"
+            >
+              Quick Links
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blogs"
+                  class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="relative hover:text-primary1 transition-colors before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-0 before:bg-primary1 before:transition-all before:duration-300 before:ease-in-out hover:before:w-full font-semibold"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
 
-      <!-- Contact Information -->
-      <div class="w-full md:w-1/3 flex-shrink-1">
-        <h3 class="text-lg font-semibold mb-4 relative before:absolute  before:left-0 before:bottom-[-3px] before:h-[2px] before:w-20 before:bg-primary1 cursor-pointer">Contact Us</h3>
-        <p class="mb-2"><strong>Email:</strong> <a href="mailto:info@adsktm.com" class="hover:text-primary1 transition-colors">info@adsktm.com</a></p>
-        <p class="mb-2"><strong>Phone:</strong> <a href="tel:+1234567890" class="hover:text-primary1 transition-colors">+1 234 567 890</a></p>
-        <p class="mb-2"><strong>Address:</strong> Mid-Baneshwor,Kathmandu</p>
-        <div class="flex space-x-4 mt-4">
-          <a href="#" class="text-primary1 hover:text-primary2 transition-colors"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-primary1 hover:text-primary2 transition-colors"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-primary1 hover:text-primary2 transition-colors"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-primary1 hover:text-primary2 transition-colors"><i class="fab fa-instagram"></i></a>
+          <!-- Contact Information -->
+          <div class="w-full md:w-1/3 flex-shrink-1">
+            <h3
+              class="text-lg font-semibold mb-4 relative before:absolute before:left-0 before:bottom-[-3px] before:h-[2px] before:w-20 before:bg-primary1 cursor-pointer"
+            >
+              Contact Us
+            </h3>
+            <p class="mb-2">
+              <strong>Email:</strong>
+              <a
+                href="mailto:info@adsktm.com"
+                class="hover:text-primary1 transition-colors"
+                >info@adsktm.com</a
+              >
+            </p>
+            <p class="mb-2">
+              <strong>Phone:</strong>
+              <a
+                href="tel:+1234567890"
+                class="hover:text-primary1 transition-colors"
+                >+1 234 567 890</a
+              >
+            </p>
+            <p class="mb-2">
+              <strong>Address:</strong> Mid-Baneshwor,Kathmandu
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a
+                href="#"
+                class="text-primary1 hover:text-primary2 transition-colors"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="text-primary1 hover:text-primary2 transition-colors"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-primary1 hover:text-primary2 transition-colors"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="text-primary1 hover:text-primary2 transition-colors"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 border-t border-gray-700 pt-4">
+          <p class="text-sm">&copy; 2024 ADSKTM. All rights reserved.</p>
         </div>
       </div>
-    </div>
-
-    <div class="text-center mt-8 border-t border-gray-700 pt-4">
-      <p class="text-sm">&copy; 2024 ADSKTM. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <!-- AOS Initialization -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-<!-- Mobile Menu Toggle Script -->
+    <!-- Mobile Menu Toggle Script -->
 
-<script src="./assets/js/mobileNav.js"> </script>
-<!-- Scroll to Top Button Script -->
-<script src="./assets/js/scroll.js">
-  
-</script>
-</body>
-
+    <script src="./assets/js/mobileNav.js"></script>
+    <!-- Scroll to Top Button Script -->
+    <script src="./assets/js/scroll.js"></script>
+  </body>
 </html>

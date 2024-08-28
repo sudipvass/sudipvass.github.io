@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileServicesToggle = document.getElementById('mobileServicesToggle');
     const mobileServicesMenu = document.getElementById('mobileServicesMenu');
     const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
-
+    
     navbarToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
         document.body.classList.toggle('overflow-hidden');
