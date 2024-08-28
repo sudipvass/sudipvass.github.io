@@ -42,7 +42,6 @@
     display: none;
   }
   .navbar-scrolled{
-    /* background-color: var(--primary2) !important; */
     background-color: rgb(6, 22, 52) !important;
     transition: 4s ease-in;
     opacity: 90%;
