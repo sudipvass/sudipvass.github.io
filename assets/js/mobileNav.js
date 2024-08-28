@@ -4,19 +4,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeMobileMenu = document.getElementById('closeMobileMenu');
     const mobileServicesToggle = document.getElementById('mobileServicesToggle');
     const mobileServicesMenu = document.getElementById('mobileServicesMenu');
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
 
-    // Toggle mobile menu
     navbarToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
     });
 
-    // Close mobile menu
     closeMobileMenu.addEventListener('click', function() {
         mobileMenu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
     });
 
-    // Toggle Services dropdown in mobile view
     mobileServicesToggle.addEventListener('click', function() {
         mobileServicesMenu.classList.toggle('hidden');
+    });
+
+ 
+    mobileNavItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            if (item !== mobileServicesToggle) {  
+                mobileMenu.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
     });
 });
