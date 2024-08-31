@@ -17,9 +17,9 @@
    <!-- Navbar -->
    <nav
    id="navbar"
-   class="fixed max-w-full bg-transparent z-50 top-0 left-0 w-full p-3 text-white transition-all duration-300"
+   class="fixed max-w-full bg-transparent z-50  w-full p-3 text-white transition-all duration-300"
  >
-   <div class="flex items-center justify-between">
+   <div class="flex  items-center justify-between box-border">
      <div class="flex items-center ">
        <a href="/">
          <img
@@ -177,61 +177,56 @@
 
  <!-- Hero Section -->
  <section
-   id="home"
-   class="w-full bg-[#e04d01] relative flex flex-col md:flex-row items-center justify-center   h-screen"
+ id="home"
+ class="relative w-full h-screen bg-[#e04d01] overflow-hidden flex flex-col md:flex-row items-center justify-center"
+>
+ <video
+   class="absolute top-0 left-0 w-full h-full object-cover"
+   autoplay
+   muted
+   loop
  >
-   <video
-     class="absolute top-0 left-0 w-full h-full object-cover"
-     autoplay
-     muted
-     loop
+   <source src="./assets/video/video3.mp4" type="video/mp4" />
+ </video>
+ <div
+   class="relative z-10 w-full md:w-1/2 text-white p-5 flex flex-col items-start hero-content"
+   data-aos="zoom-in"
+   data-aos-duration="1500"
+ >
+   <h1
+     class="text-4xl md:text-6xl lg:text-6xl font-bold mb-4 text-reveal infinite-animation"
    >
-     <source src="./assets/video/video3.mp4" type="video/mp4" />
-   </video>
-   <!-- <div
-     class="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-blue-500 to-orange-900 opacity-0 z-10"
-   ></div> -->
-   <div
-     class="relative z-10 w-full md:w-1/2 text-white p-5 flex flex-col items-start hero-content"
-     data-aos="zoom-in"
-     data-aos-duration="1500"
-   >
-     <h1
-       class="text-4xl md:text-6xl lg:text-6xl  font-bold mb-4 text-reveal infinite-animation"
-     >
-       <span class="text-primary1">Empower Your</span> Brand with ADSKTM
-     </h1>
-     <p
+     <span class="text-primary1">Empower Your</span> Brand with ADSKTM
+   </h1>
+   <p
      class="text-base md:text-lg lg:text-xl mb-6 text-reveal infinite-animation font-bold typewriter"
      style="animation-delay: 1s"
    >
      Your gateway to unparalleled digital advertising solutions.
    </p>
-   
-   
+   <a href="#contact">
+     <button
+       class="relative py-2 px-6 uppercase text-primary1 font-bold transition-all flex items-center gap-3 duration-500 ease-in-out border-2 rounded-full border-white-700 overflow-hidden bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary2 before:transform before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-in-out before:rounded-full hover:text-white before:hover:scale-x-100"
+       style="animation-delay: 2s"
+     >
+       <span class="relative z-10">Get Started</span>
+       <span class="text-3xl pb-2 relative z-10">&#8594;</span>
+     </button>
+   </a>
+ </div>
+ <div
+   class="relative z-10 w-full hidden md:block md:w-1/2 p-5 hero-img-container"
+   data-aos="fade-left"
+   data-aos-duration="1500"
+ >
+   <img
+     src="./assets/images/digimg.webp"
+     alt="ADSKTM Advertising"
+     class="w-full h-auto rounded-full shadow-lg opacity-70 text-reveal infinite-animation"
+   />
+ </div>
+</section>
 
-     <a href="#contact">
-       <button
-         class="relative py-2 px-6 uppercase text-primary1 font-bold transition-all flex items-center gap-3 duration-500 ease-in-out border-2 rounded-full border-white-700 overflow-hidden bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary2 before:transform before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-in-out before:rounded-full hover:text-white before:hover:scale-x-100"
-         style="animation-delay: 2s"
-       >
-         <span class="relative z-10">Get Started</span>
-         <span class="text-3xl pb-2 relative z-10">&#8594;</span>
-       </button>
-     </a>
-   </div>
-   <div
-     class="relative z-10 w-full hidden md:block md:w-1/2 p-5 hero-img-container"
-     data-aos="fade-left"
-     data-aos-duration="1500"
-   >
-     <img
-       src="./assets/images/digimg.webp"
-       alt="ADSKTM Advertising"
-       class="w-full h-auto rounded-full shadow-lg opacity-70 text-reveal infinite-animation blink"
-     />
-   </div>
- </section>
 
  <!-- Scroll to Top Button -->
  <button
