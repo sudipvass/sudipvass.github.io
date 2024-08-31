@@ -2,7 +2,15 @@
   --primary1: #FE6A00;
   --primary2: #1D0D78;
 }
- 
+ *{
+  box-sizing: border-box;
+ }
+section {
+  scroll-margin-top: 6rem;
+}
+body{
+  overflow-x: hidden;
+}
  /* Dropdown Styles */
     .dropdown:hover .dropdown-menu,.dropdown-menu:hover {
       display: block;
@@ -26,21 +34,21 @@
     
  
 
-  .hero {
+  /* .hero {
     position: relative;
     height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  }
-  .hero-content {
+  } */
+  /* .hero-content {
     position: relative;
     z-index: 10; 
-  }
-  .hero-img-container {
+  } */
+  /* .hero-img-container {
     display: none;
-  }
+  } */
   .navbar-scrolled{
     background-color: rgb(6, 22, 52) !important;
     transition: 4s ease-in;
@@ -84,3 +92,55 @@
   }
 
  
+ 
+
+  @keyframes floating {
+0% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-10px);
+}
+100% {
+  transform: translateY(0);
+}
+}
+
+.floating {
+animation: floating 3s ease-in-out infinite;
+}
+
+
+
+
+/* Typewriter animation */
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff; /* Change color if needed */
+  animation: typewriter 4s steps(40, end) infinite, blink 0.75s step-end infinite;
+  width: 0;
+  animation-delay: 1s;
+}

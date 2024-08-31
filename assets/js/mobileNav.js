@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileServicesToggle = document.getElementById('mobileServicesToggle');
     const mobileServicesMenu = document.getElementById('mobileServicesMenu');
     const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    const serviceItems = document.querySelectorAll(".service-item")
     
     navbarToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
@@ -29,4 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    serviceItems.forEach(((items)=>{
+        items.addEventListener('click',()=>{
+            mobileMenu.classList.add('hidden')
+            document.body.classList.remove("overflow-hidden")
+        })
+    }))
 });
