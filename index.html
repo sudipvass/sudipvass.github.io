@@ -8,269 +8,257 @@
     <title>ADSKTM - Your Digital Advertising Partner</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
- 
-    </style>
+    <style></style>
   </head>
 
-  <body class="font-sans leading-normal tracking-normal bg-black">
-   <!-- Navbar -->
-   <nav
-   id="navbar"
-   class="fixed max-w-full bg-transparent z-50  w-full p-3 text-white transition-all duration-300"
- >
-   <div class="flex  items-center justify-between box-border">
-     <div class="flex items-center ">
-       <a href="/">
-         <img
-           src="./assets/images/adsktmLogo.jpg"
-           alt="ADSKTM logo"
-           class="w-12 h-12 md:w-16 md:h-16 rounded-lg cursor-pointer"
-         />
-       </a>
-     </div>
-     <!-- Toggle button for mobile view -->
-     <button
-       class=" md:hidden text-white focus:outline-none"
-       id="navbarToggle"
-     >
-       <img
-         src="./assets/images/menu_icon.png"
-         class="h-6 w-6 text-white bg-white rounded hover:bg-primary1"
-         alt=""
-       />
-     </button>
-     <div
-       id="navbarMenu"
-       class="hidden md:flex md:items-center md:justify-center  flex-1 space-x-3 md:space-x-10"
-     >
-       <a
-         href=""
-         class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-         >Home</a
-       >
-       <a
-         href="#about"
-         class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-         >About</a
-       >
-
-       <div class="relative dropdown group">
-         <a
-           class="hover:text-primary1 font-bold text-lg md:text-xl active:text-primary1 cursor-pointer mobile-nav-item"
-           >Services</a
-         >
-         <div
-           class="dropdown-menu bg-gray-100 text-primary2 py-2 px-6 mt-2 rounded shadow-lg hidden group-hover:block"
-         >
-           <a
-             href="#seo"
-             class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
-             >SEO Optimization</a
-           >
-           <a
-             href="#smm"
-             class="block px-4 py-2 font-bold hover:text-primary1"
-             >Social Media Marketing</a
-           >
-           <a
-             href="#content"
-             class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
-             >Content Creation</a
-           >
-         </div>
-       </div>
-       <a
-         href="#products"
-         class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-         >Products</a
-       >
-       <a
-         href="#blogs"
-         class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-         >Blogs</a
-       >
-       <a
-         href="#contact"
-         class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-         >Contact</a
-       >
-     </div>
-   </div>
-
-   <div
-     id="mobileMenu"
-     class="absolute inset-0 w-full h-screen bg-slate-500 flex flex-col text-white hidden z-50"
-   >
-     <div
-       class="mobileNavHeader bg-slate-900 flex items-center justify-between p-4"
-     >
-       <a href="/">
-         <img
-           src="./assets/images/adsktmLogo.jpg"
-           alt="ADSKTM logo"
-           class="w-12 h-12 md:w-16 md:h-16 cursor-pointer rounded-lg hover:text-primary1"
-         />
-       </a>
-       <button id="closeMobileMenu" class="hover:text-primary1 text-2xl">
-         &#x2715;
-       </button>
-     </div>
-
-     <div
-       class="w-full flex-1 mt-6 flex flex-col items-start pl-4 space-y-4"
-     >
-       <a
-         href="/"
-         class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-         >Home</a
-       >
-       <a
-         href="#about"
-         class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-         >About</a
-       >
-
-       <!-- Services dropdown for mobile -->
-       <div id="mobileServices" class="w-full">
-         <a
-           id="mobileServicesToggle"
-           class="mobile-nav-item font-bold text-lg md:text-xl cursor-pointer hover:text-primary1"
-           >Services</a
-         >
-         <div
-           id="mobileServicesMenu"
-           class="hidden flex flex-col pl-4 mt-2 space-y-2"
-         >
-           <a href="#seo" class="block py-2 font-bold hover:text-primary1"
-             >SEO Optimization</a
-           >
-           <a href="#smm" class="block py-2 font-bold hover:text-primary1"
-             >Social Media Marketing</a
-           >
-           <a
-             href="#content"
-             class="block py-2 font-bold hover:text-primary1"
-             >Content Creation</a
-           >
-         </div>
-       </div>
-
-       <a
-         href="#products"
-         class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-         >Products</a
-       >
-       <a
-         href="#blogs"
-         class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-         >Blogs</a
-       >
-       <a
-         href="#contact"
-         class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-         >Contact</a
-       >
-     </div>
-   </div>
- </nav>
-
- <!-- Hero Section -->
- <section
- id="home"
- class="relative w-full h-screen bg-[#e04d01] overflow-hidden flex flex-col md:flex-row items-center justify-center"
->
- <video
-   class="absolute top-0 left-0 w-full h-full object-cover"
-   autoplay
-   muted
-   loop
- >
-   <source src="./assets/video/video3.mp4" type="video/mp4" />
- </video>
- <div
-   class="relative z-10 w-full md:w-1/2 text-white p-5 flex flex-col items-start hero-content"
-   data-aos="zoom-in"
-   data-aos-duration="1500"
- >
-   <h1
-     class="text-4xl md:text-6xl lg:text-6xl font-bold mb-4 text-reveal infinite-animation"
-   >
-     <span class="text-primary1">Empower Your</span> Brand with ADSKTM
-   </h1>
-   <p
-     class="text-base md:text-lg lg:text-xl mb-6 text-reveal infinite-animation font-bold typewriter"
-     style="animation-delay: 1s"
-   >
-     Your gateway to unparalleled digital advertising solutions.
-   </p>
-   <a href="#contact">
-     <button
-       class="relative py-2 px-6 uppercase text-primary1 font-bold transition-all flex items-center gap-3 duration-500 ease-in-out border-2 rounded-full border-white-700 overflow-hidden bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary2 before:transform before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-in-out before:rounded-full hover:text-white before:hover:scale-x-100"
-       style="animation-delay: 2s"
-     >
-       <span class="relative z-10">Get Started</span>
-       <span class="text-3xl pb-2 relative z-10">&#8594;</span>
-     </button>
-   </a>
- </div>
- <div
-   class="relative z-10 w-full hidden md:block md:w-1/2 p-5 hero-img-container"
-   data-aos="fade-left"
-   data-aos-duration="1500"
- >
-   <img
-     src="./assets/images/digimg.webp"
-     alt="ADSKTM Advertising"
-     class="w-full h-auto rounded-full shadow-lg opacity-70 text-reveal infinite-animation"
-   />
- </div>
-</section>
-
-
- <!-- Scroll to Top Button -->
- <button
-   id="scrollTopBtn"
-   title="Go to top"
-   class="fixed bottom-10 right-6 bg-primary1 text-white py-3 px-5 shadow-lg border-4 border-[#03658c] text-4xl rounded-full cursor-pointer z-50 hover:bg-primary2"
- >
-   &#8679;
- </button>
-
- <!-- About Section -->
- <section
-   id="about"
-   class="py-20 bg-gray-100 text-gray-900   shadow-lg"
- >
-   <div class="about-container">
-     <h2
-       class="text-4xl text-orange-600 md:text-4xl font-bold mb-4 text-center"
-       data-aos="fade-up"
-       data-aos-duration="1500"
-     >
-       About Us
-     </h2>
-     <p
-       class="md:text-lg mb-8 text-justify flex justify-center p-6"
-       data-aos="fade-up"
-       data-aos-duration="1500"
-       data-aos-delay="200"
-     >
-       ADSKTM is a leading digital advertising agency specializing in
-       innovative solutions to boost your online presence. Our suite of
-       services is designed to maximize your online presence and deliver
-       measurable results. Our mission is to empower your brand to reach new
-       heights.
-     </p>
-   </div>
- </section>
-
-
-    <!-- Services Section -->
-    <section
-      id="services"
-      class="py-24 bg-gray-100 "
+  <body class="font-sans box-border m-0 p-0 leading-normal tracking-normal bg-black">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed max-w-full bg-transparent z-50 w-full p-3 text-white transition-all duration-300"
     >
+      <div class="flex items-center justify-between box-border">
+        <div class="flex items-center">
+          <a href="/">
+            <img
+              src="./assets/images/adsktmLogo.jpg"
+              alt="ADSKTM logo"
+              class="w-12 h-12 md:w-16 md:h-16 rounded-lg cursor-pointer"
+            />
+          </a>
+        </div>
+        <!-- Toggle button for mobile view -->
+        <button
+          class="md:hidden text-white focus:outline-none"
+          id="navbarToggle"
+        >
+          <img
+            src="./assets/images/menu_icon.png"
+            class="h-6 w-6 text-white bg-white rounded hover:bg-primary1"
+            alt=""
+          />
+        </button>
+        <div
+          id="navbarMenu"
+          class="hidden md:flex md:items-center md:justify-center flex-1 space-x-3 md:space-x-10"
+        >
+          <a
+            href=""
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >About</a
+          >
+
+          <div class="relative dropdown group">
+            <a
+              class="hover:text-primary1 font-bold text-lg md:text-xl active:text-primary1 cursor-pointer mobile-nav-item"
+              >Services</a
+            >
+            <div
+              class="dropdown-menu bg-gray-100 text-primary2 py-2 px-6 mt-2 rounded shadow-lg hidden group-hover:block"
+            >
+              <a
+                href="#seo"
+                class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
+                >SEO Optimization</a
+              >
+              <a
+                href="#smm"
+                class="block px-4 py-2 font-bold hover:text-primary1"
+                >Social Media Marketing</a
+              >
+              <a
+                href="#content"
+                class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
+                >Content Creation</a
+              >
+            </div>
+          </div>
+          <a
+            href="#products"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Products</a
+          >
+          <a
+            href="#blogs"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Blogs</a
+          >
+          <a
+            href="#contact"
+            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="absolute inset-0 w-full h-screen bg-slate-500 flex flex-col text-white hidden z-50"
+      >
+        <div
+          class="mobileNavHeader bg-slate-900 flex items-center justify-between p-4"
+        >
+          <a href="/">
+            <img
+              src="./assets/images/adsktmLogo.jpg"
+              alt="ADSKTM logo"
+              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer rounded-lg hover:text-primary1"
+            />
+          </a>
+          <button id="closeMobileMenu" class="hover:text-primary1 text-2xl">
+            &#x2715;
+          </button>
+        </div>
+
+        <div
+          class="w-full flex-1 mt-6 flex flex-col items-start pl-4 space-y-4"
+        >
+          <a
+            href="/"
+            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+            >About</a
+          >
+
+          <!-- Services dropdown for mobile -->
+          <div id="mobileServices" class="w-full">
+            <a
+              id="mobileServicesToggle"
+              class="mobile-nav-item font-bold text-lg md:text-xl cursor-pointer hover:text-primary1"
+              >Services</a
+            >
+            <div
+              id="mobileServicesMenu"
+              class="hidden flex flex-col pl-4 mt-2 space-y-2"
+            >
+              <a href="#seo" class="block py-2 font-bold hover:text-primary1"
+                >SEO Optimization</a
+              >
+              <a href="#smm" class="block py-2 font-bold hover:text-primary1"
+                >Social Media Marketing</a
+              >
+              <a
+                href="#content"
+                class="block py-2 font-bold hover:text-primary1"
+                >Content Creation</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="#products"
+            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+            >Products</a
+          >
+          <a
+            href="#blogs"
+            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+            >Blogs</a
+          >
+          <a
+            href="#contact"
+            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative w-full box-border h-screen bg-[#e04d01] overflow-hidden flex flex-col md:flex-row items-center justify-center"
+    >
+      
+      <div
+        class="relative max-w-full z-10 w-full md:w-1/2 px-6 text-white  flex flex-col items-start hero-content"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+      >
+        <h1
+          class="text-4xl md:text-6xl lg:text-6xl font-bold mb-4 text-reveal infinite-animation"
+        >
+          <span class="text-primary1">Empower Your</span> Brand with ADSKTM
+        </h1>
+        <p
+          class="text-base md:text-lg lg:text-xl mb-6 text-reveal infinite-animation font-bold typewriter"
+          style="animation-delay: 1s"
+        >
+          Your gateway to unparalleled digital advertising solutions.
+        </p>
+        <a href="#contact">
+          <button
+            class="relative py-2 px-6 uppercase text-primary1 font-bold transition-all flex items-center gap-3 duration-500 ease-in-out border-2 rounded-full border-white-700 overflow-hidden bg-transparent before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-primary2 before:transform before:scale-x-0 before:origin-left before:transition-transform before:duration-500 before:ease-in-out before:rounded-full hover:text-white before:hover:scale-x-100"
+            style="animation-delay: 2s"
+          >
+            <span class="relative z-10">Get Started</span>
+            <span class="text-3xl pb-2 relative z-10">&#8594;</span>
+          </button>
+        </a>
+      </div>
+      <div
+        class="relative z-10 w-full hidden md:block md:w-1/2 p-5 hero-img-container"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
+        <img
+          src="./assets/images/digimg.webp"
+          alt="ADSKTM Advertising"
+          class="w-full h-auto rounded-full shadow-lg opacity-70 text-reveal infinite-animation"
+        />
+      </div>
+      <video class="absolute w-full h-full object-cover" autoplay muted loop>
+        <source src="./assets/video/video3.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollTopBtn"
+      title="Go to top"
+      class="fixed bottom-10 left-6 bg-primary1 text-white py-3 px-5 shadow-lg border-4 border-[#03658c] text-4xl rounded-full cursor-pointer z-50 hover:bg-primary2"
+    >
+      &#8679;
+    </button>
+ <!-- About Section -->
+  <section id="about" class=" pt-6 bg-gray-100 text-gray-900">
+  <div class="container mx-auto text-center">
+  
+      <h2
+        class="text-4xl text-orange-600 md:text-4xl font-bold text-center"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        About Us
+      </h2>
+   
+   
+      <p
+        class="md:text-lg text-justify  p-6"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="200"
+      >
+        ADSKTM is a leading digital advertising agency specializing in
+        innovative solutions to boost your online presence. Our suite of
+        services is designed to maximize your online presence and deliver
+        measurable results. Our mission is to empower your brand to reach
+        new heights.
+      </p>
+   
+  </div>
+</section>
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-100">
       <div class="container mx-auto text-center">
         <h2
           class="text-3xl text-primary1 md:text-4xl font-bold mb-8"
@@ -290,13 +278,13 @@
 
         <div class="grid grid-cols-1 gap-4">
           <!-- Service 1 -->
-          <div id="seo" class="w-full  p-4 sm:p-2 flex scroll-mt-[6rem]">
+          <div id="seo" class="w-full p-4 sm:p-2 flex scroll-mt-[6rem]">
             <div
               class="rounded-lg p-8 flex flex-col lg:flex-row justify-between w-full"
             >
               <!-- Content -->
               <div
-                class="lg:w-1/2 shadow-inner p-4  rounded-lg"
+                class="lg:w-1/2 shadow-inner p-4 rounded-lg"
                 data-aos="fade-up"
               >
                 <h3
@@ -323,7 +311,7 @@
               </div>
               <!-- Image -->
               <div
-                class="grow mb-4 lg:mb-0 p-4 order-1 sm:order-2 "
+                class="grow mb-4 lg:mb-0 p-4"
                 data-aos="fade-left"
                 data-aos-duration="1500"
                 data-aos-delay="250"
@@ -336,39 +324,43 @@
               </div>
             </div>
           </div>
-          
 
           <!-- Service 2 -->
-          <div id="smm" class=" w-full p-4 sm:p-2 flex scroll-mt-[6rem]">
+          <div id="smm" class="w-full sm:p-2 flex scroll-mt-[6rem]">
             <div
               class="rounded-lg p-8 flex flex-col lg:flex-row justify-between w-full"
             >
               <!-- Image -->
               <div
-              class="grow mb-4 lg:mb-0 p-4 order-1 sm:order-2   rounded-lg rounded-ss-[10rem]"
+                class="grow mb-4 md:mb-0 p-4 order-2 lg:order-1 rounded-lg rounded-ss-[10rem]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="800"
               >
-              <img
-              src="./assets/images/social_media3.png"
+                <img
+                  src="./assets/images/social_media3.png"
                   alt="Social Media Marketing"
-                  class="object-cover   rounded-t-[5rem] rounded-b-[5rem]"
+                  class="object-cover rounded-t-[5rem] rounded-b-[5rem] w-full h-auto"
                 />
               </div>
               <!-- Content -->
               <div
-                class="lg:w-1/2 p-4 rounded-lg"
+                class="lg:w-1/2 p-4 rounded-lg order-1 md:order-2"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="500"
               >
-                <h3 class="text-xl md:text-2xl text-primary1 font-semibold mb-4">
+                <h3
+                  class="text-xl md:text-2xl text-primary1 font-semibold mb-4"
+                >
                   Social Media Marketing
                 </h3>
-                <p class="text-base md:text-lg text-justify"  data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="800">
+                <p
+                  class="text-base md:text-lg text-justify"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="800"
+                >
                   Engage your audience with targeted social media campaigns. We
                   create and manage high-performing social media strategies to
                   enhance your brand's online presence. From content creation to
@@ -383,7 +375,7 @@
           <!-- Service 3 -->
           <div id="content" class="w-full p-4 flex scroll-mt-[6rem]">
             <div
-              class="rounded-lg p-8 flex flex-col lg:flex-row justify-between w-full "
+              class="rounded-lg p-8 flex flex-col lg:flex-row justify-between w-full"
             >
               <!-- Content -->
               <div class="lg:w-1/2 p-4 rounded-lg">
@@ -419,7 +411,7 @@
                 <img
                   src="./assets/images/content-creation1.png"
                   alt="Content Creation"
-                  class="rounded-lg  rounded-t-[5rem] rounded-b-[5rem]"
+                  class="rounded-lg rounded-t-[5rem] rounded-b-[5rem]"
                 />
               </div>
             </div>
@@ -427,6 +419,7 @@
         </div>
       </div>
     </section>
+   
 
     <!-- Products Section -->
     <section id="products" class="py-20 bg-[rgb(7,57,164)] text-white">
@@ -447,7 +440,7 @@
           Discover our range of digital marketing products tailored to your
           needs.
         </p>
-    
+
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
           <!-- Product 1 -->
           <div
@@ -471,7 +464,7 @@
               </div>
             </div>
           </div>
-    
+
           <!-- Product 2 -->
           <div
             class="w-full p-4 flex"
@@ -494,7 +487,7 @@
               </div>
             </div>
           </div>
-    
+
           <!-- Product 3 -->
           <div
             class="w-full p-4 flex"
@@ -520,10 +513,12 @@
         </div>
       </div>
     </section>
-    
 
     <!-- Blogs Section -->
-    <section id="blogs" class="py-16 bg-gray-100 scroll-mt-[5rem] text-gray-900">
+    <section
+      id="blogs"
+      class="py-16 bg-gray-100 scroll-mt-[5rem] text-gray-900"
+    >
       <div class="container mx-auto text-center">
         <h2
           class="text-3xl md:text-4xl text-primary1 font-bold mb-4"
@@ -682,17 +677,17 @@
         <div class="flex flex-col md:flex-row justify-between mb-8 relative">
           <!-- Floating Facebook Icon -->
           <a
-          href="https://facebook.com"
-          class="absolute bottom-0  lg:top-[25%]  right-6 mb-4 mr-4 bg-white rounded-full hover:bg-primary1 h-12 w-12 flex items-center justify-center transition-transform transform hover:scale-110 shadow-lg hover:shadow-xl floating"
-          aria-label="Follow us on Facebook"
-        >
-          <img
-            src="./assets/images/facebook-icon.png"
-            alt="Facebook Icon"
-            class="h-6 w-6"
-          />
-        </a>
-    
+            href="https://facebook.com"
+            class="absolute bottom-0 lg:top-[25%] right-6 mb-4 mr-4 bg-white rounded-full hover:bg-primary1 h-12 w-12 flex items-center justify-center transition-transform transform hover:scale-110 shadow-lg hover:shadow-xl floating"
+            aria-label="Follow us on Facebook"
+          >
+            <img
+              src="./assets/images/facebook-icon.png"
+              alt="Facebook Icon"
+              class="h-6 w-6"
+            />
+          </a>
+
           <!-- Footer Logo and Description -->
           <div class="w-full md:w-1/3 mb-6 md:mb-0">
             <img
@@ -702,12 +697,11 @@
             />
             <p class="text-base md:text-lg leading-relaxed mb-4">
               Empower your brand with ADSKTM. Our digital marketing expertise
-              drives results through innovative solutions and data-driven strategies,
-              helping you excel in the digital world.
+              drives results through innovative solutions and data-driven
+              strategies, helping you excel in the digital world.
             </p>
-          
           </div>
-    
+
           <!-- Quick Links -->
           <div class="mb-6 md:mb-0">
             <h3
@@ -764,7 +758,7 @@
               </ul>
             </div>
           </div>
-    
+
           <!-- Contact Information -->
           <div class="w-full md:w-1/3 flex-shrink-1">
             <h3
@@ -793,14 +787,13 @@
             </p>
           </div>
         </div>
-    
+
         <div class="text-center mt-8 border-t border-gray-700 pt-4">
           <p class="text-sm">&copy; 2024 ADSKTM. All rights reserved.</p>
         </div>
       </div>
     </footer>
-    
-    
+
     <!-- AOS Initialization -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

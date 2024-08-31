@@ -34,31 +34,13 @@ body{
     
  
 
-  /* .hero {
-    position: relative;
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  } */
-  /* .hero-content {
-    position: relative;
-    z-index: 10; 
-  } */
-  /* .hero-img-container {
-    display: none;
-  } */
+
   .navbar-scrolled{
     background-color: rgb(6, 22, 52) !important;
-    transition: 4s ease-in;
+    transition: 2s ease-in;
     opacity: 100%;
   }
-  @media (min-width: 768px) {
-    .hero-img-container {
-      display: flex;
-    }
-  }
+
      @keyframes textReveal {
       0% {
           opacity: 0;
