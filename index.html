@@ -11,176 +11,176 @@
     <style></style>
   </head>
 
-  <body class="font-sans box-border m-0 p-0 leading-normal tracking-normal bg-black">
+  <body class="font-sans box-border flex flex-col m-0 p-0 leading-normal tracking-normal bg-black">
     <!-- Navbar -->
     <nav
-      id="navbar"
-      class="fixed max-w-full bg-transparent z-50 w-full p-3 text-white transition-all duration-300"
+  id="navbar"
+  class="fixed top-0 left-0   lg:max-w-full w-full bg-transparent z-50  p-3 text-white transition-all duration-300"
+>
+  <div class="flex items-center justify-between box-border">
+    <div class="flex items-center">
+      <a href="/">
+        <img
+          src="./assets/images/adsktmLogo.jpg"
+          alt="ADSKTM logo"
+          class="w-12 h-12 md:w-16 md:h-16 rounded-lg cursor-pointer"
+        />
+      </a>
+    </div>
+
+    <button
+      class= " md:hidden text-white focus:outline-none"
+      id="navbarToggle"
     >
-      <div class="flex items-center justify-between box-border">
-        <div class="flex items-center">
-          <a href="/">
-            <img
-              src="./assets/images/adsktmLogo.jpg"
-              alt="ADSKTM logo"
-              class="w-12 h-12 md:w-16 md:h-16 rounded-lg cursor-pointer"
-            />
-          </a>
-        </div>
-        <!-- Toggle button for mobile view -->
-        <button
-          class="md:hidden text-white focus:outline-none"
-          id="navbarToggle"
-        >
-          <img
-            src="./assets/images/menu_icon.png"
-            class="h-6 w-6 text-white bg-white rounded hover:bg-primary1"
-            alt=""
-          />
-        </button>
-        <div
-          id="navbarMenu"
-          class="hidden md:flex md:items-center md:justify-center flex-1 space-x-3 md:space-x-10"
-        >
-          <a
-            href=""
-            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-            >Home</a
-          >
-          <a
-            href="#about"
-            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-            >About</a
-          >
+      <img
+        src="./assets/images/menu_icon.png"
+        class="h-6 w-6 text-white bg-white rounded hover:bg-primary1"
+        alt="Menu"
+      />
+    </button>
 
-          <div class="relative dropdown group">
-            <a
-              class="hover:text-primary1 font-bold text-lg md:text-xl active:text-primary1 cursor-pointer mobile-nav-item"
-              >Services</a
-            >
-            <div
-              class="dropdown-menu bg-gray-100 text-primary2 py-2 px-6 mt-2 rounded shadow-lg hidden group-hover:block"
-            >
-              <a
-                href="#seo"
-                class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
-                >SEO Optimization</a
-              >
-              <a
-                href="#smm"
-                class="block px-4 py-2 font-bold hover:text-primary1"
-                >Social Media Marketing</a
-              >
-              <a
-                href="#content"
-                class="mobile-nav-item block px-4 py-2 font-bold hover:text-primary1"
-                >Content Creation</a
-              >
-            </div>
-          </div>
-          <a
-            href="#products"
-            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-            >Products</a
-          >
-          <a
-            href="#blogs"
-            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-            >Blogs</a
-          >
-          <a
-            href="#contact"
-            class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
-            >Contact</a
-          >
-        </div>
-      </div>
-
-      <div
-        id="mobileMenu"
-        class="absolute inset-0 w-full h-screen bg-slate-500 flex flex-col text-white hidden z-50"
+    <div
+      id="navbarMenu"
+      class="hidden md:flex md:items-center md:justify-center flex-1 space-x-3 md:space-x-10"
+    >
+      <a
+        href="#home"
+        class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+        >Home</a
       >
-        <div
-          class="mobileNavHeader bg-slate-900 flex items-center justify-between p-4"
+      <a
+        href="#about"
+        class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+        >About</a
+      >
+      <div class="relative dropdown group">
+        <a
+          class="hover:text-primary1 font-bold text-lg md:text-xl active:text-primary1 cursor-pointer mobile-nav-item"
+          >Services</a
         >
-          <a href="/">
-            <img
-              src="./assets/images/adsktmLogo.jpg"
-              alt="ADSKTM logo"
-              class="w-12 h-12 md:w-16 md:h-16 cursor-pointer rounded-lg hover:text-primary1"
-            />
-          </a>
-          <button id="closeMobileMenu" class="hover:text-primary1 text-2xl">
-            &#x2715;
-          </button>
-        </div>
-
         <div
-          class="w-full flex-1 mt-6 flex flex-col items-start pl-4 space-y-4"
+          class="dropdown-menu bg-gray-100 text-primary2 py-2 px-6 mt-2 rounded shadow-lg hidden group-hover:block"
         >
           <a
-            href="/"
-            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-            >Home</a
+            href="#seo"
+            class="block px-4 py-2 font-bold hover:text-primary1"
+            >SEO Optimization</a
           >
           <a
-            href="#about"
-            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-            >About</a
-          >
-
-          <!-- Services dropdown for mobile -->
-          <div id="mobileServices" class="w-full">
-            <a
-              id="mobileServicesToggle"
-              class="mobile-nav-item font-bold text-lg md:text-xl cursor-pointer hover:text-primary1"
-              >Services</a
-            >
-            <div
-              id="mobileServicesMenu"
-              class="hidden flex flex-col pl-4 mt-2 space-y-2"
-            >
-              <a href="#seo" class="block py-2 font-bold hover:text-primary1"
-                >SEO Optimization</a
-              >
-              <a href="#smm" class="block py-2 font-bold hover:text-primary1"
-                >Social Media Marketing</a
-              >
-              <a
-                href="#content"
-                class="block py-2 font-bold hover:text-primary1"
-                >Content Creation</a
-              >
-            </div>
-          </div>
-
-          <a
-            href="#products"
-            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-            >Products</a
+            href="#smm"
+            class="block px-4 py-2 font-bold hover:text-primary1"
+            >Social Media Marketing</a
           >
           <a
-            href="#blogs"
-            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-            >Blogs</a
-          >
-          <a
-            href="#contact"
-            class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
-            >Contact</a
+            href="#content"
+            class="block px-4 py-2 font-bold hover:text-primary1"
+            >Content Creation</a
           >
         </div>
       </div>
-    </nav>
+      <a
+        href="#products"
+        class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+        >Products</a
+      >
+      <a
+        href="#blogs"
+        class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+        >Blogs</a
+      >
+      <a
+        href="#contact"
+        class="mobile-nav-item font-bold hover:text-primary1 text-lg md:text-xl active:text-primary1"
+        >Contact</a
+      >
+    </div>
+  </div>
+
+  <div
+    id="mobileMenu"
+    class="fixed inset-0 w-full h-screen bg-slate-500 flex flex-col text-white hidden z-50 transition-all duration-300"
+  >
+    <div
+      class="mobileNavHeader bg-slate-900 flex items-center justify-between p-4"
+    >
+      <a href="/">
+        <img
+          src="./assets/images/adsktmLogo.jpg"
+          alt="ADSKTM logo"
+          class="w-12 h-12 md:w-16 md:h-16 cursor-pointer rounded-lg hover:text-primary1"
+        />
+      </a>
+      <button id="closeMobileMenu" class="hover:text-primary1 text-2xl">
+        &#x2715;
+      </button>
+    </div>
+
+    <div
+      class="w-full flex-1 mt-6 flex flex-col items-start pl-4 space-y-4"
+    >
+      <a
+        href="#home"
+        class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+        >About</a
+      >
+
+      <!-- Services dropdown for mobile -->
+      <div id="mobileServices" class="w-full">
+        <a
+          id="mobileServicesToggle"
+          class="mobile-nav-item font-bold text-lg md:text-xl cursor-pointer hover:text-primary1"
+          >Services</a
+        >
+        <div
+          id="mobileServicesMenu"
+          class="hidden  flex flex-col pl-4 mt-2 space-y-2"
+        >
+          <a href="#seo" class="block py-2 font-bold hover:text-primary1"
+            >SEO Optimization</a
+          >
+          <a href="#smm" class="block py-2 font-bold hover:text-primary1"
+            >Social Media Marketing</a
+          >
+          <a
+            href="#content"
+            class="block py-2 font-bold hover:text-primary1"
+            >Content Creation</a
+          >
+        </div>
+      </div>
+
+      <a
+        href="#products"
+        class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+        >Products</a
+      >
+      <a
+        href="#blogs"
+        class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+        >Blogs</a
+      >
+      <a
+        href="#contact"
+        class="mobile-nav-item font-bold text-lg md:text-xl hover:text-primary1"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav> 
 
     <!-- Hero Section -->
     <section
       id="home"
-      class="relative w-full box-border h-screen bg-[#e04d01] overflow-hidden flex flex-col md:flex-row items-center justify-center"
+      class="relative w-full box-border h-screen  md:max-w-full bg-[#e04d01] overflow-hidden flex flex-col md:flex-row items-center justify-center "
     >
       
       <div
-        class="relative max-w-full z-10 w-full md:w-1/2 px-6 text-white  flex flex-col items-start hero-content"
+        class="relative max-w-full p-6 z-10 w-full md:w-1/2 px-6 text-white  flex flex-col items-start hero-content"
         data-aos="zoom-in"
         data-aos-duration="1500"
       >
@@ -207,7 +207,7 @@
       </div>
       <div
         class="relative z-10 w-full hidden md:block md:w-1/2 p-5 hero-img-container"
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-duration="1500"
       >
         <img
@@ -221,45 +221,44 @@
       </video>
     </section>
 
-    <!-- Scroll to Top Button -->
     <button
       id="scrollTopBtn"
       title="Go to top"
-      class="fixed bottom-10 left-6 bg-primary1 text-white py-3 px-5 shadow-lg border-4 border-[#03658c] text-4xl rounded-full cursor-pointer z-50 hover:bg-primary2"
+      class="fixed bottom-10 left-6 bg-primary1 text-white py-1 px-3 shadow-lg border-4 border-[#03658c] text-4xl rounded-full cursor-pointer z-50 hover:bg-primary2"
     >
       &#8679;
     </button>
  <!-- About Section -->
-  <section id="about" class=" pt-6 bg-gray-100 text-gray-900">
-  <div class="container mx-auto text-center">
-  
-      <h2
-        class="text-4xl text-orange-600 md:text-4xl font-bold text-center"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        About Us
-      </h2>
-   
-   
-      <p
-        class="md:text-lg text-justify  p-6"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-delay="200"
-      >
-        ADSKTM is a leading digital advertising agency specializing in
-        innovative solutions to boost your online presence. Our suite of
-        services is designed to maximize your online presence and deliver
-        measurable results. Our mission is to empower your brand to reach
-        new heights.
-      </p>
-   
-  </div>
+ <section id="about" class="relative flex flex-col pt-6 bg-gray-100 text-gray-900">
+  <div class=" relative container  text-center max-w-full">
+     <h2
+      class="text-4xl text-orange-600 font-bold text-center "
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      About Us
+    </h2>
+ 
+    <p
+      class="text-justify p-6 w-full md:w-[60rem] mx-auto  md:text-lg md:p-6 "
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-delay="200"
+    >
+      ADSKTM is a leading digital advertising agency specializing in
+      innovative solutions to boost your online presence. Our suite of
+      services is designed to maximize your online presence and deliver
+      measurable results. Our mission is to empower your brand to reach
+      new heights.
+    </p>  
+  </div> 
 </section>
+
+
+
     <!-- Services Section -->
     <section id="services" class="py-24 bg-gray-100">
-      <div class="container mx-auto text-center">
+      <div class=" relative container mx-auto text-center">
         <h2
           class="text-3xl text-primary1 md:text-4xl font-bold mb-8"
           data-aos="fade-up"
@@ -269,18 +268,18 @@
         </h2>
         <p
           class="text-base md:text-lg mb-12 text-primary2 font-bold"
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="100"
         >
           Comprehensive solutions to elevate your digital presence.
         </p>
 
-        <div class="grid grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 gap-6">
           <!-- Service 1 -->
           <div id="seo" class="w-full p-4 sm:p-2 flex scroll-mt-[6rem]">
             <div
-              class="rounded-lg p-8 flex flex-col lg:flex-row justify-between w-full"
+              class=" relative rounded-lg p-8 flex flex-col lg:flex-row justify-between w-full"
             >
               <!-- Content -->
               <div
@@ -288,9 +287,9 @@
                 data-aos="fade-up"
               >
                 <h3
-                  class="text-xl md:text-2xl text-primary1 font-semibold mb-4"
+                  class="text-xl text-start md:text-2xl text-primary1 font-semibold mb-4"
                   data-aos="fade-up"
-                  data-aos-duration="1500"
+                  data-aos-duration="1000"
                   data-aos-delay="759"
                 >
                   SEO Optimization
@@ -298,8 +297,8 @@
                 <p
                   class="text-base md:text-lg text-justify"
                   data-aos="fade-up"
-                  data-aos-duration="1500"
-                  data-aos-delay="800"
+                  data-aos-duration="600"
+                  data-aos-delay="200"
                 >
                   Boost your website's visibility with our expert SEO services.
                   We optimize your site to rank higher on search engines,
@@ -312,9 +311,9 @@
               <!-- Image -->
               <div
                 class="grow mb-4 lg:mb-0 p-4"
-                data-aos="fade-left"
-                data-aos-duration="1500"
-                data-aos-delay="250"
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="500"
               >
                 <img
                   src="./assets/images/seo.jpeg"
@@ -351,7 +350,7 @@
                 data-aos-delay="500"
               >
                 <h3
-                  class="text-xl md:text-2xl text-primary1 font-semibold mb-4"
+                  class="text-xl md:text-2xl text-start text-primary1 font-semibold mb-4"
                 >
                   Social Media Marketing
                 </h3>
@@ -380,7 +379,7 @@
               <!-- Content -->
               <div class="lg:w-1/2 p-4 rounded-lg">
                 <h3
-                  class="text-xl md:text-2xl text-primary1 font-semibold mb-4"
+                  class="text-xl md:text-2xl text-start  text-primary1 font-semibold mb-4"
                   data-aos="fade-up"
                   data-aos-duration="800"
                   data-aos-delay="500"
@@ -434,7 +433,7 @@
         <p
           class="text-base md:text-lg mb-10 font-bold"
           data-aos="fade-up"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
           data-aos-delay="200"
         >
           Discover our range of digital marketing products tailored to your
@@ -446,7 +445,7 @@
           <div
             class="w-full p-4 flex"
             data-aos="fade-up"
-            data-aos-duration="1500"
+            data-aos-duration="800"
             data-aos-delay="500"
           >
             <div
@@ -454,11 +453,11 @@
             >
               <div>
                 <h3
-                  class="product_title text-xl md:text-2xl text-primary1 font-semibold mb-4"
+                  class="product_title text-xl md:text-2xl text-primary1 font-semibold mb-4 text-start "
                 >
                   Product 1
                 </h3>
-                <p class="text-base md:text-lg">
+                <p class="text-base md:text-lg text-start ">
                   A powerful tool to enhance your online presence.
                 </p>
               </div>
@@ -467,21 +466,21 @@
 
           <!-- Product 2 -->
           <div
-            class="w-full p-4 flex"
+            class="w-full p-4 flex justify-center"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-delay="700"
           >
             <div
               class="bg-[#160a6d] rounded-lg shadow-lg p-8 flex flex-col justify-between w-full transition-transform transform hover:scale-105 hover:bg-[#0d0652] hover:shadow-2xl"
             >
               <div>
                 <h3
-                  class="product_title text-xl md:text-2xl font-semibold mb-4 text-primary1"
+                  class="product_title text-xl md:text-2xl font-semibold mb-4 text-primary1 text-start "
                 >
                   Product 2
                 </h3>
-                <p class="text-base md:text-lg">
+                <p class="text-base md:text-lg text-start ">
                   Maximize your reach with our innovative solutions.
                 </p>
               </div>
@@ -492,19 +491,19 @@
           <div
             class="w-full p-4 flex"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="1500"
+            data-aos-duration="1000"
+            data-aos-delay="900"
           >
             <div
               class="bg-[#160a6d] rounded-lg shadow-lg p-8 flex flex-col justify-between w-full transition-transform transform hover:scale-105 hover:bg-[#0d0652] hover:shadow-2xl"
             >
               <div>
                 <h3
-                  class="product_title text-xl text-primary1 md:text-2xl font-semibold mb-4"
+                  class="product_title text-xl text-primary1 md:text-2xl font-semibold mb-4 text-start "
                 >
                   Product 3
                 </h3>
-                <p class="text-base md:text-lg">
+                <p class="text-base md:text-lg text-start ">
                   Drive results with our cutting-edge technology.
                 </p>
               </div>
@@ -523,7 +522,7 @@
         <h2
           class="text-3xl md:text-4xl text-primary1 font-bold mb-4"
           data-aos="fade-up"
-          data-aos-duration="1500"
+          data-aos-duration="1000"
         >
           Our Blogs
         </h2>
@@ -540,14 +539,14 @@
           <div
             class="w-full p-4"
             data-aos="fade-up"
-            data-aos-duration="1500"
+            data-aos-duration="1000"
             data-aos-delay="500"
           >
             <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
-              <h3 class="text-xl md:text-2xl font-bold mb-4">
+              <h3 class="text-xl md:text-2xl text-primary1 font-bold mb-4 text-start ">
                 Boost Your Brand with These SEO Tips
               </h3>
-              <p class="text-base md:text-lg mb-6">
+              <p class="text-base md:text-lg mb-6 text-start ">
                 Learn the best practices for optimizing your website's SEO to
                 rank higher on search engines.
               </p>
@@ -568,14 +567,14 @@
           <div
             class="w-full p-4"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="1000"
+            data-aos-duration="1000"
+            data-aos-delay="700"
           >
             <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
-              <h3 class="text-xl md:text-2xl font-bold mb-4">
+              <h3 class="text-xl md:text-2xl text-primary1 font-bold mb-4 text-start ">
                 Social Media Strategies That Work
               </h3>
-              <p class="text-base md:text-lg mb-6">
+              <p class="text-base md:text-lg mb-6 text-start ">
                 Discover how to create effective social media campaigns that
                 engage your audience and drive results.
               </p>
@@ -596,11 +595,11 @@
           <div
             class="w-full p-4"
             data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-delay="1500"
+            data-aos-duration="1000"
+            data-aos-delay="900"
           >
             <div class="flex flex-col h-full bg-white rounded-lg shadow-lg p-6">
-              <h3 class="text-xl md:text-2xl font-bold mb-4">
+              <h3 class="text-xl md:text-2xl text-primary1 font-bold mb-4 text-start ">
                 Content Creation Tips for 2024
               </h3>
               <p class="text-base md:text-lg mb-6">
@@ -628,8 +627,8 @@
       <div class="container mx-auto text-center">
         <h2
           class="text-3xl md:text-4xl font-bold mb-8 text-primary1"
-          data-aos="fade-up"
-          data-aos-duration="1500"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
         >
           Contact Us
         </h2>
@@ -637,9 +636,7 @@
           action="#"
           method="POST"
           class="w-full md:w-1/2 mx-auto"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="200"
+        
         >
           <div class="mb-4">
             <input

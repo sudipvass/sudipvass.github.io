@@ -119,7 +119,7 @@ animation: floating 3s ease-in-out infinite;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #fff; /* Change color if needed */
+  border-right: 2px solid #fff;
   animation: typewriter 4s steps(40, end) infinite, blink 0.75s step-end infinite;
   width: 0;
   animation-delay: 1s;
